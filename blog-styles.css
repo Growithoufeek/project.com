@@ -1,0 +1,336 @@
+/* Blog Specific Styles */
+.blog-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
+.blog-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.blog-header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.blog-selector {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.blog-selector label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.blog-selector select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blog-selector select:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.blog-selector select option {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.blog-content {
+    padding: 50px 0;
+    min-height: 500px;
+}
+
+.default-message {
+    text-align: center;
+    padding: 50px 20px;
+    color: #666;
+}
+
+.default-message i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-header {
+    margin-bottom: 30px;
+}
+
+.blog-post-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.blog-meta span {
+    margin-right: 20px;
+}
+
+.blog-meta i {
+    margin-right: 5px;
+}
+
+.blog-post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.blog-post-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .blog-selector {
+        width: 90%;
+    }
+
+    .blog-post-header h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Tamil Letters Background */
+.tamil-letters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.letter {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 15rem;
+    color: var(--primary-color);
+    animation: float 6s ease-in-out infinite;
+}
+
+.letter:nth-child(2) { animation-delay: 1s; }
+.letter:nth-child(3) { animation-delay: 2s; }
+.letter:nth-child(4) { animation-delay: 3s; }
+.letter:nth-child(5) { animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section i {
+    margin-right: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .tamil-letters .letter {
+        font-size: 8rem;
+    }
+}
+
+/* Blog Content Structure Styles */
+.blog-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 30px 0;
+    padding-left: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.blog-section {
+    margin: 40px 0;
+}
+
+.blog-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.blog-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.blog-section ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.blog-section ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.blog-section blockquote {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    color: #555;
+}
+
+.blog-section img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Table Styles for Blog Content */
+.blog-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.blog-section th, 
+.blog-section td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.blog-section th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Code Block Styles */
+.blog-section pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blog-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .blog-intro {
+        font-size: 1.1rem;
+    }
+
+    .blog-section blockquote {
+        margin: 20px 0;
+        padding: 15px;
+    }
+} 

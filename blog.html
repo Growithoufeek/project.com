@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7WGFB5TKT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V7WGFB5TKT');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Thanjavur - Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/images/dp.jpg">
+</head>
+<body>
+    <!-- Add this right after body tag -->
+    <div class="tamil-letters">
+        <div class="letter">த</div>
+        <div class="letter">ஞ்</div>
+        <div class="letter">சா</div>
+        <div class="letter">வூ</div>
+        <div class="letter">ர்</div>
+    </div>
+
+    <!-- Navigation (same as index.html) -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">Explore Thanjavur</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#tours">Tours</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Header Section -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="fade-up">Our Stories</h1>
+            <p class="subtitle fade-up">Discover the heart of Thanjavur through our local perspectives</p>
+            
+            <!-- Blog Selection -->
+            <div class="blog-selector fade-up">
+                <label for="blog-select">Choose a Story:</label>
+                <select id="blog-select" onchange="loadBlog(this.value)">
+                    <option value="">Select a blog post...</option>
+                    <!-- Add your blog posts here -->
+                    <option value="blog1">Why Visit Thanjavur?</option>
+                    <option value="blog2">A Day in the Life of a Thanjavur Farmer</option>
+                    <option value="blog3">The Art of Bronze Casting</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <!-- Blog Post Container -->
+            <div id="blog-container" class="fade-up">
+                <!-- Default Message -->
+                <div class="default-message">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Select a story from the dropdown above</h2>
+                    <p>Explore our collection of local stories and experiences</p>
+                </div>
+                
+                <!-- Blog posts will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace the footer section with this -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> Email: explorethanjavur@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> Phone: +91 9876543210</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#tours">Tours</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explore Thanjavur. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const blogs = {
+            blog1: {
+                title: "Thanjavur: The Timeless Kingdom That Awaits You",
+                date: "Feb 15, 2024",
+                author: "Local Guide",
+                content: `
+                    <img src="./assets/images/hidden-temple.jpg" alt="Hidden Temple">
+                    
+                    <div class="blog-intro">
+                        <p>Deep in the heart of Tamil Nadu lies a city that isn’t just a place but an experience—a grand narrative carved in stone, set to the rhythm of classical music, and flavored with a culinary tradition older than recorded history. Welcome to Thanjavur, a city that has been the cradle of South Indian culture, art, and spirituality for over a thousand years.
+
+
+</p>
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>Why Visit Thanjavur?</h3>
+                        <p>While many travelers seek beaches, mountains, or metropolitan adventures, Thanjavur offers something different—something richer. It is a living museum where ancient traditions blend seamlessly with the present. Here are 10 irresistible reasons why this hidden gem in Tamil Nadu should be on your bucket list:</p>
+                        <img src="./assets/images/pathways.jpg" alt="Ancient Pathways">
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>1. Witness the Greatest Architectural Wonder of South India</h3>
+                        <p>The Brihadeeswarar Temple, a UNESCO World Heritage Site, is one of the greatest architectural achievements of humankind. Built over 1,000 years ago without modern technology, its massive stone structure and intricate carvings leave architects and historians baffled to this day. The towering 216-feet gopuram (temple tower) casts no shadow at noon—a mystery that still puzzles scientists!
+
+
+Why visit? You don’t just see the temple—you feel its aura. As you walk barefoot on the ancient stone floors, a strange sense of timelessness takes over.
+
+</p>
+                       
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>2. Explore the Grand Thanjavur Palace Like a King
+</h3>
+                        <blockquote>
+                            Hidden Gem: The Saraswathi Mahal Library inside the palace contains palm-leaf manuscripts that are older than the printing press!
+
+
+                        </blockquote>
+                        <p>Step into the Thanjavur Royal Palace, a fortress of the Nayak and Maratha rulers. Its long corridors, towering ceilings, and ancient murals transport you to a bygone era of royalty. Climb to the top of the palace tower for a breathtaking panoramic view of the city, with temples dotting the landscape like jewels.
+
+</p>
+                    </div>
+                    <div class="blog-section">
+                        <h3>3. Experience the Exotic Village Life and Endless Green Paddies</h3>
+                        <p>Most tourists only see India’s chaotic cities, but Thanjavur offers an untouched countryside experience. Take a bullock cart ride through lush paddy fields, visit local potters shaping traditional Thanjavur dolls, and watch weavers create intricate silk sarees—some of the finest in the world.
+
+Why it’s special? Ever had fresh coconut water straight from a tree, eaten a meal on a banana leaf, or watched fireflies dance in the night? Here, you can.
+
+</p>
+                    </div>
+                     <div class="blog-section">
+                        <h3>4. Thanjavur Paintings – Own a Royal Masterpiece</h3>
+                        <p>Thanjavur is home to a one-of-a-kind art form—Thanjavur paintings. With gold foil, gemstones, and intricate detailing, these paintings were once created exclusively for kings and temples. Now, you can watch artists create them and even take one home!</p>
+                    </div>
+                     <div class="blog-section">
+                        <h3>5. Music That Moves the Soul – Experience Carnatic Bliss
+</h3>
+                        <p>hanjavur is the birthplace of Carnatic music, South India’s classical music form. Whether it’s the mesmerizing sound of the veena or the rhythmic beats of mridangam, music is embedded in the city’s soul.
+
+Don’t Miss: If you’re lucky, you might catch a live Carnatic music concert at one of the heritage halls, surrounded by an audience of music lovers, both old and young.</p>
+                    </div>
+                     <div class="blog-section">
+                        <h3>6. A Foodie’s Paradise – Ancient Tamil Cuisine You Won’t Find Elsewhere</h3>
+                        <p>Thanjavur’s food is an experience in itself. Unlike regular South Indian cuisine, it has a unique royal touch.</p>
+                         <ul>
+                            <li>Thanjavur Veetu Saapadu (Traditional Homely Meal) – Served on a banana leaf with over 10 dishes, including sambar, rasam, kootu, poriyal, and payasam (dessert).
+</li>
+                            <li>Nei Appam – A traditional sweet made with rice flour, jaggery, and ghee, a favorite of temple priests.
+</li>
+                            <li>Aadi Kummayam – An exotic sweet dish made from black urad dal and palm jaggery, known for its health benefits.
+</li>
+                        </ul>
+                    </div>
+                     <div class="blog-section">
+                        <h3>7. See the Famous "Dancing Dolls" of Thanjavur</h3>
+                        <p>The Thanjavur Bommai (Dancing Doll) is a UNESCO-recognized handicraft. These unique bobblehead dolls have been made for centuries, and their slow, hypnotic movements are a perfect representation of Tamil Nadu’s graceful Bharatanatyam dance.
+
+</p>
+                      <blockquote>
+                            Must-Try: Visit a doll-making workshop and watch artisans hand-paint each piece with vibrant colors.
+
+
+
+                        </blockquote>
+                    </div>
+                     <div class="blog-section">
+                        <h3>8. Visit a Hidden Temple in the Forest</h3>
+                        <p>While Brihadeeswarar Temple is world-famous, there are hundreds of ancient temples hidden in the countryside, untouched by tourists. Imagine walking through a dense forest and suddenly finding a 1,000-year-old temple covered in moss, where time stands still.</p>
+                        <blockquote>
+                            Local Secret: The Kudanthai Karonam Temple is an ancient Shiva temple hidden in a peaceful village, offering an offbeat spiritual experience.
+
+                        </blockquote>
+                    </div>
+                     <div class="blog-section">
+                        <h3>9. The People and Their Unmatched Hospitality
+</h3>
+                        <p>More than the monuments and the history, what makes Thanjavur truly special is its people. The locals welcome visitors with warmth, always eager to share their traditions and stories.You might even get invited to a local Tamil wedding, where you can experience the grand rituals, traditional silk attire, and a feast fit for kings.</p>
+                    </div>
+                     <div class="blog-section">
+                        <h3>Final Thoughts – Why You Should Pack Your Bags Now!</h3>
+                        <p>Thanjavur isn’t just another city. It is an experience—a place where time slows down, history speaks, and culture thrives. Whether you are a history buff, an art lover, a food enthusiast, or simply someone looking for an authentic Indian experience, Thanjavur will surprise and enchant you at every turn.
+
+So, if you’re planning a trip to India, skip the usual tourist traps and step into the royal kingdom of Thanjavur—where every stone has a story to tell.
+
+See you in Thanjavur!</p>
+                    </div>
+                `
+            },
+            blog2: {
+                title: "A Day in the Life of a Thanjavur Farmer: The Backbone of Tamil Nadu’s Rice Bowl",
+                date: "Feb 20, 2024",
+                author: "Agricultural student",
+                content: `
+                    <img src="./assets/images/farmer.jpg" alt="Thanjavur Farmer">
+                    
+                    <div class="blog-intro">
+                        <p>Amidst the misty sunrise and the golden paddy fields, life begins in Thanjavur, not with the sound of alarm clocks, but with the rhythmic call of birds and the gentle rustling of coconut trees. This is a land where farming isn’t just a profession—it’s a way of life, passed down through generations. Today, we step into the world of a Thanjavur farmer, experiencing his life from dawn till dusk.
+
+
+</p>
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>The Morning: When Nature Wakes Up, So Does the Farmer</h3>
+                        <p>Long before the world stirs, at around 4:30 AM, the Thanjavur farmer is already awake. In the cool darkness, he lights a traditional brass lamp, offers a prayer to Karuppasamy (the village deity), and sips a freshly brewed cup of sukku kaapi (dry ginger coffee)—a powerful energizer for the day ahead.
+
+5:00 AM – Walking Through the Dew-Kissed Fields
+Wearing a simple white veshti (dhoti) and a checked angavastram (shawl) over his shoulder, he steps into his vast green empire—his paddy fields. The air is crisp, the earth damp with morning dew, and the smell of wet soil fills the senses. He inspects his crops, looking for signs of pests or diseases, ensuring that the fields are healthy.</p>
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>Traditional Farming Methods</h3>
+                        <p>The age-old techniques that have stood the test of time...</p>
+                    </div>
+                `
+            },
+            blog3: {
+                title: "okkali A Day in the Life of a Thanjavur Farmer",
+                date: "March 20, 2024",
+                author: "Agricultural Expert",
+                content: `
+                    <img src="./assets/images/farmer.jpg" alt="Thanjavur Farmer">
+                    
+                    <div class="blog-intro">
+                        <p>Experience the daily rhythm of life in the rice bowl of Tamil Nadu...</p>
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>Dawn in the Paddy Fields</h3>
+                        <p>As the sun rises over the vast expanse of green...</p>
+                    </div>
+
+                    <div class="blog-section">
+                        <h3>Traditional Farming Methods</h3>
+                        <p>The age-old techniques that have stood the test of time...</p>
+                    </div>
+                `
+            }
+        };
+
+        function loadBlog(blogId) {
+            const blogContainer = document.getElementById('blog-container');
+            
+            if (!blogId) {
+                blogContainer.innerHTML = `
+                    <div class="default-message">
+                        <i class="fas fa-book-open"></i>
+                        <h2>Select a story from the dropdown above</h2>
+                        <p>Explore our collection of local stories and experiences</p>
+                    </div>
+                `;
+                return;
+            }
+
+            if (blogs[blogId]) {
+                const blog = blogs[blogId];
+                blogContainer.innerHTML = `
+                    <article class="blog-post">
+                        <header class="blog-post-header">
+                            <h2>${blog.title}</h2>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> ${blog.date}</span>
+                                <span><i class="fas fa-user"></i> ${blog.author}</span>
+                            </div>
+                        </header>
+                        <div class="blog-post-content">
+                            ${blog.content}
+                        </div>
+                    </article>
+                `;
+            }
+        }
+    </script>
+</body>
+</html> 
